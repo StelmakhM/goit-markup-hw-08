@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
         integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./css/main.css">
     <title>Студія</title>
 </head>
 
@@ -22,29 +22,46 @@
     <header class="header">
         <div class="container header__container">
             <a class="header__logo" href="#"><span class="header__logo--blue">Web</span>Studio</a>
-            <nav class="navigation">
-                <ul class="navigation__list">
-                    <li class="navigation__item"> <a href="./index.html"
-                            class="navigation__link navigation__link--current ">Студія</a></li>
-                    <li class="navigation__item"><a href="./portfolio.html" class="navigation__link">Портфоліо</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Контакти</a></li>
+            <button class="mobile-menu__button" aria-expanded="false" data-menu-button aria-controls="mobile-menu">
+                <svg class="mobile-menu__icon" aria-label="Перемикач мобільного меню" width="40" height="40">
+                    <use class="mobile-menu__close" href="./images/icons.svg#icon-close-menu"></use>
+                    <use class="mobile-menu__open" href="./images/icons.svg#icon-menu"></use>
+                </svg>
+            </button>
+            <div class="mobile-menu" id="mobile-menu">
+                <nav class="navigation">
+                    <ul class="navigation__list">
+                        <li class="navigation__item"> <a href="./index.html"
+                                class="navigation__link navigation__link--current ">Студія</a></li>
+                        <li class="navigation__item"><a href="./portfolio.html" class="navigation__link">Портфоліо</a>
+                        </li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">Контакти</a></li>
+                    </ul>
+                </nav>
+                <ul class="contacts">
+                    <li class="contacts__item">
+                        <a class="contacts__link" href="mailto:info@devstudio.com">
+                            <svg class="contacts__icon contacts__icon--mail">
+                                <use href="./images/icons.svg#icon-mail"></use>
+                            </svg>
+                            info@devstudio.com</a>
+                    </li>
+                    <li class="contacts__item">
+                        <a class="contacts__link" href="tel:+380961111111">
+                            <svg class="contacts__icon contacts__icon--phone">
+                                <use href="./images/icons.svg#icon-smartphone"></use>
+                            </svg>+38 096 111 11 11</a>
+                    </li>
                 </ul>
-            </nav>
-            <ul class="contacts">
-                <li class="contacts__item">
-                    <a class="contacts__link" href="mailto:info@devstudio.com">
-                        <svg class="contacts__icon contacts__icon--mail">
-                            <use href="./images/icons.svg#icon-mail"></use>
-                        </svg>
-                        info@devstudio.com</a>
-                </li>
-                <li class="contacts__item">
-                    <a class="contacts__link" href="tel:+380961111111">
-                        <svg class="contacts__icon contacts__icon--phone">
-                            <use href="./images/icons.svg#icon-smartphone"></use>
-                        </svg>+38 096 111 11 11</a>
-                </li>
-            </ul>
+                <ul class="header-socials">
+                    <li class="header-socials__item"><a href="#" class="header-socials__link">Instagram</a></li>
+                    <li class="header-socials__item"><a href="#" class="header-socials__link">Twitter</a></li>
+                    <li class="header-socials__item"><a href="#" class="header-socials__link">Facebook</a></li>
+                    <li class="header-socials__item"><a href="#" class="header-socials__link">LinkedIn</a></li>
+                </ul>
+            </div>
+
+
         </div>
     </header>
 
@@ -53,10 +70,11 @@
     <main>
         <section class="hero">
             <div class="container">
-                <h1 class="hero__title">Ефективні рішення для <br />вашого бізнесу</h1>
+                <h1 class="hero__title">Ефективні рішення для </br> вашого бізнесу</h1>
                 <button class="hero__button" type="button" data-modal-open>Замовити послугу</button>
             </div>
         </section>
+
         <section class="features">
             <div class="container">
                 <h2 class="features__title visually-hidden">Особливості</h2>
@@ -89,7 +107,7 @@
                             </svg>
                         </div>
                         <h3 class="features__subtitle">ПЛАНУВАННЯ</h3>
-                        <p class="features-text">Так само консультація з широким активом значною мірою зумовлює.</p>
+                        <p class="features__text">Так само консультація з широким активом значною мірою зумовлює.</p>
                     </li>
                     <li class="features__item">
                         <div class="features__iconwrap">
@@ -249,12 +267,14 @@
 
     <footer class="footer">
         <div class="container footer__container">
-            <div><a class="footer__logo" href="#"><span class="footer__logo--blue">Web</span>Studio</a>
+            <div class="footer__wrap">
                 <address class="address">
+                    <a class="footer__logo" href="#"><span class="footer__logo--blue">Web</span>Studio</a>
                     <ul class="address__list">
                         <li class="address__item"><a class="address__link address__link--white"
                                 href="https://goo.gl/maps/iSP6fUKGi2yoj21T9" target="_blank"
-                                rel="noopener noreferrer">м. Київ,
+                                rel="noopener noreferrer">м.
+                                Київ,
                                 пр-т Лесі Українки,
                                 26</a></li>
                         <li class="address__item"><a class="address__link"
@@ -263,48 +283,54 @@
                                 11</a></li>
                     </ul>
                 </address>
+                <div class="footer-socials">
+                    <p class="footer-socials__title">приєднуйтесь</p>
+                    <ul class="footer-socials__list">
+                        <li class="footer-socials__item">
+                            <a class="footer-socials__link" href="#">
+                                <svg class="footer-socials__icon">
+                                    <use href="./images/icons.svg#icon-instagram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer-socials__item">
+                            <a class="footer-socials__link" href="#">
+                                <svg class="footer-socials__icon">
+                                    <use href="./images/icons.svg#icon-twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer-socials__item">
+                            <a class="footer-socials__link" href="#">
+                                <svg class="footer-socials__icon">
+                                    <use href="./images/icons.svg#icon-facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer-socials__item">
+                            <a class="footer-socials__link" href="#">
+                                <svg class="footer-socials__icon">
+                                    <use href="./images/icons.svg#icon-linkedin"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-socials">
-                <p class="footer-socials__title">приєднуйтесь</p>
-                <ul class="footer-socials__list">
-                    <li class="footer-socials__item">
-                        <a class="footer-socials__link" href="#">
-                            <svg class="footer-socials__icon">
-                                <use href="./images/icons.svg#icon-instagram"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="footer-socials__item">
-                        <a class="footer-socials__link" href="#">
-                            <svg class="footer-socials__icon">
-                                <use href="./images/icons.svg#icon-twitter"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="footer-socials__item">
-                        <a class="footer-socials__link" href="#">
-                            <svg class="footer-socials__icon">
-                                <use href="./images/icons.svg#icon-facebook"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="footer-socials__item">
-                        <a class="footer-socials__link" href="#">
-                            <svg class="footer-socials__icon">
-                                <use href="./images/icons.svg#icon-linkedin"></use>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+
+
             <div class="footer-subscribe">
                 <p class="footer-subscribe__title">Підпишіться на розсилку</p>
-                <form>
-                    <label>
+                <form class="footer-subscribe__form">
+                    <label class="footer-subscribe__label">
                         <input class="footer-subscribe__input" type="email" name="usermail" placeholder="E-mail">
                     </label>
                     <button class="footer-subscribe__button" type="submit"><strong
-                            class="footer-subscribe__subtitle">Підписатися</strong></button>
+                            class="footer-subscribe__subtitle">Підписатися</strong>
+                        <svg class="footer-subscribe__icon">
+                            <use href="./images/icons.svg#icon-send"></use>
+                        </svg>
+                    </button>
                 </form>
             </div>
         </div>
@@ -337,20 +363,25 @@
                         <use href="./images/icons.svg#icon-modalmail"></use>
                     </svg>
                 </div>
+                <label class="modal__label" for="comment">Коментар</label>
+                <textarea class="modal__textarea" name="comment" id="comment" placeholder="Введіть текст"></textarea>
                 <div class="modal__wrap">
-                    <label class="modal__label" for="comment">Коментар</label>
-                    <textarea class="modal__textarea" name="comment" id="comment"
-                        placeholder="Введіть текст"></textarea>
+                    <input class="modal__checkbox" type="checkbox" name="agreement" id="agreement">
+
+                    <label class="modal__confirm" for="agreement"> <span class="modal__icon2"></span>Погоджуюся з
+                        розсилкою
+                        та приймаю <a class="modal__link" href="#">Умови
+                            договору</a></label>
                 </div>
-                <input class="modal__checkbox visually-hidden" type="checkbox" name="agreement" id="agreement">
-                <label class="modal__confirm" for="agreement"> Погоджуюся з розсилкою та приймаю <a class="modal__link"
-                        href="#">Умови
-                        договору</a></label>
                 <button class="modal__button-submit" type="submit">Відправити</button>
             </form>
         </div>
-    </div>
+    </div> -->
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
