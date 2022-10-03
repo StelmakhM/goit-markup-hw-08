@@ -1,6 +1,5 @@
 // Header 
 
-
 .header {
     z-index: 10;
     border-bottom: 1px solid #ececec;
@@ -9,6 +8,10 @@
     top: -1px;
     right: 0;
     background-color: $accessory-color;
+
+    @media screen and (min-width:1200px) {
+        position: static;
+    }
 }
 
 .header__container {
@@ -35,6 +38,12 @@
 
     @media screen and (min-width: 768px) {
         margin-right: 87px;
+    }
+
+    @media screen and (min-width:1200px) {
+        font-size: 26px;
+        line-height: calc(31 / 26);
+        margin-right: 92px;
     }
 }
 
@@ -169,6 +178,11 @@
         margin-bottom: 0;
         margin-left: auto;
     }
+
+    @media screen and (min-width:1200px) {
+        flex-direction: row;
+        gap: 30px;
+    }
 }
 
 .contacts__item:last-child {
@@ -229,6 +243,10 @@
 
     @media screen and (min-width: 768px) {
         display: inline-block;
+    }
+
+    @media screen and (min-width:1200px) {
+        margin-right: 10px;
     }
 }
 

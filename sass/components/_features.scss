@@ -1,6 +1,11 @@
 .features {
     padding-top: 60px;
     padding-bottom: 60px;
+
+    @media screen and (min-width:1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 }
 
 .features__list {
@@ -26,6 +31,11 @@
     @media screen and (min-width: 768px) {
         flex-basis: calc((100% - 30px) /2);
         max-width: 354px;
+    }
+
+    @media screen and (min-width:1200px) {
+        flex-basis: calc((100% - 90px) / 4);
+        max-width: 270px;
     }
 }
 

@@ -35,6 +35,11 @@
         width: calc(100% - 320px);
         overflow-y: initial;
     }
+
+    @media screen and (min-width:1200px) {
+        min-width: 528px;
+    }
+
 }
 
 .backdrop.is-hidden .modal {
@@ -79,6 +84,10 @@
     letter-spacing: 0.03em;
 
     color: $main-color;
+
+    @media screen and (min-width:1200px) {
+        line-height: calc(23/20);
+    }
 }
 
 .modal__label {
@@ -179,6 +188,11 @@
 
     color: $contacts-color;
     cursor: pointer;
+
+    @media screen and (min-width:1200px) {
+        font-size: 14px;
+        line-height: calc(24/14);
+    }
 }
 
 .modal__icon2 {
@@ -192,6 +206,14 @@
     background-image: url(../images/uncheckboxed.svg);
     background-size: contain;
     transition: background-image $cubic 250ms;
+
+    @media screen and (min-width:1200px) {
+        top: 50%;
+        left: -8px;
+        transform: translate(-100%, -50%);
+
+
+    }
 }
 
 .modal__checkbox:checked+.modal__confirm>.modal__icon2 {

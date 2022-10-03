@@ -7,6 +7,12 @@
     background-repeat: no-repeat;
     background-position: center;
     background-color: $background-color;
+
+    @media screen and (min-width:1200px) {
+        height: 600px;
+        padding-top: 200px;
+        padding-bottom: 280px;
+    }
 }
 
 .hero__title {
@@ -19,6 +25,11 @@
     text-transform: uppercase;
 
     color: $accessory-color;
+
+    @media screen and (min-width:1200px) {
+        font-size: 44px;
+        line-height: calc(60 / 44);
+    }
 }
 
 .hero__button {
@@ -40,5 +51,9 @@
     &:focus,
     &:hover {
         background-color: $buttons-hover-color;
+    }
+
+    @media screen and (min-width:1200px) {
+        padding: 10px 32px;
     }
 }
