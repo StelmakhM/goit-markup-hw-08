@@ -1,6 +1,11 @@
 .products {
     padding-top: 60px;
     padding-bottom: 60px;
+
+    @media screen and (min-width:1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 }
 
 .products__list {
@@ -18,6 +23,13 @@
         flex-basis: calc((100% - 30px) / 2);
         max-width: 354px;
     }
+
+    @media screen and (min-width:1200px) {
+        flex-basis: calc((100% - 60px) / 3);
+        max-width: 370px;
+
+    }
+
 }
 
 .products__link {
@@ -54,6 +66,13 @@
         padding-bottom: 77px;
 
     }
+
+    @media screen and (min-width:1200px) {
+        padding-top: 63px;
+        padding-bottom: 63px;
+
+    }
+
 }
 
 .products__thumb {
