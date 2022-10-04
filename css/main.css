@@ -845,7 +845,6 @@ img {
 .products__thumb {
   position: relative;
   overflow: hidden;
-  height: 294px;
 }
 
 .products__info {
