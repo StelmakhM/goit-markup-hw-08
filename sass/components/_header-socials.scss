@@ -2,6 +2,9 @@
     display: flex;
     flex-wrap: wrap;
 
+    position: fixed;
+    bottom: 48px;
+
     @media screen and (min-width: 768px) {
         display: none;
     }
@@ -9,6 +12,7 @@
 
 .header-socials__item {
     padding-right: 10px;
+
 
     &:nth-child(n+2) {
         padding-left: 10px;
