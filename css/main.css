@@ -242,6 +242,12 @@ img {
     line-height: 1.1428571429;
   }
 }
+@media screen and (min-width: 1200px) {
+  .navigation__link {
+    font-size: 16px;
+    line-height: 1.1428571429;
+  }
+}
 .navigation__link:focus, .navigation__link:hover {
   color: #2196F3;
 }
@@ -297,6 +303,12 @@ img {
     align-items: center;
   }
 }
+@media screen and (min-width: 1200px) {
+  .contacts__link {
+    font-size: 16px;
+    line-height: 1.1428571429;
+  }
+}
 .contacts__link:focus, .contacts__link:hover {
   color: #2196F3;
 }
@@ -309,6 +321,12 @@ img {
   .contacts__link[href^=mail] {
     font-size: 12px;
     line-height: 1.1666666667;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__link[href^=mail] {
+    font-size: 16px;
+    line-height: 1.1428571429;
   }
 }
 
