@@ -242,12 +242,6 @@ img {
     line-height: 1.1428571429;
   }
 }
-@media screen and (min-width: 1200px) {
-  .navigation__link {
-    font-size: 16px;
-    line-height: 1.1428571429;
-  }
-}
 .navigation__link:focus, .navigation__link:hover {
   color: #2196F3;
 }
@@ -305,7 +299,7 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .contacts__link {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.1428571429;
   }
 }
@@ -325,7 +319,7 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .contacts__link[href^=mail] {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.1428571429;
   }
 }
@@ -500,6 +494,11 @@ img {
   text-transform: uppercase;
   color: #212121;
 }
+@media screen and (min-width: 768px) {
+  .features__subtitle {
+    text-align: start;
+  }
+}
 
 .features__text {
   font-weight: 400;
@@ -595,14 +594,6 @@ img {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-.team__item:not(:last-child) {
-  margin-bottom: 30px;
-}
-@media screen and (min-width: 768px) {
-  .team__item:not(:last-child) {
-    margin-bottom: 0;
-  }
 }
 @media screen and (min-width: 768px) {
   .team__item {
@@ -959,6 +950,7 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .footer__logo {
+    display: inline-block;
     font-size: 26px;
     line-height: 1.1923076923;
   }
@@ -971,6 +963,7 @@ img {
 @media screen and (min-width: 1200px) {
   .address {
     margin-bottom: 0;
+    text-align: start;
   }
 }
 
@@ -1141,6 +1134,11 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #FFFFFF;
+}
+@media screen and (min-width: 1200px) {
+  .footer-socials__title {
+    text-align: start;
+  }
 }
 
 .footer-socials__list {

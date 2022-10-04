@@ -58,6 +58,7 @@
     }
 
     @media screen and (min-width: 1200px) {
+        display: inline-block;
         font-size: 26px;
         line-height: calc(31/26);
     }
@@ -69,6 +70,8 @@
 
     @media screen and (min-width: 1200px) {
         margin-bottom: 0;
+        text-align: start;
+
     }
 }
 
