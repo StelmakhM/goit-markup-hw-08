@@ -135,6 +135,7 @@ img {
     position: static;
     padding: 0;
     margin: 0;
+    height: auto;
     display: flex;
     align-items: center;
     background-color: transparent;
@@ -265,6 +266,7 @@ img {
   .contacts {
     margin-bottom: 0;
     margin-left: auto;
+    position: initial;
   }
 }
 @media screen and (min-width: 1200px) {
