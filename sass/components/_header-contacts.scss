@@ -4,12 +4,12 @@
     flex-direction: column;
     margin-bottom: 64px;
 
-    position: fixed;
-    bottom: 48px;
+    margin-top: auto;
 
     @media screen and (min-width: 768px) {
         margin-bottom: 0;
         margin-left: auto;
+        margin-top: initial;
         position: initial;
     }
 

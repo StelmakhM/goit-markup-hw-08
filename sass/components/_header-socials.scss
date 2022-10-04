@@ -2,9 +2,6 @@
     display: flex;
     flex-wrap: wrap;
 
-    position: fixed;
-    bottom: 48px;
-
     @media screen and (min-width: 768px) {
         display: none;
     }
